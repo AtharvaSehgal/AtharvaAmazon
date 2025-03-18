@@ -1,0 +1,397 @@
+<html>
+
+<head>
+    <title>
+        Footwear
+    </title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        .description {
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+        }
+
+        .watch-container {
+            margin: 20px;
+            text-align: center;
+            border: 1px solid white;
+            padding: 10px;
+            background-color: aliceblue;
+            position: relative;
+            transition: transform 0.3s ease;
+            overflow-y: scroll;
+
+        }
+
+        .watch-container img {
+            width: 350px;
+            height: 200px;
+            /* Set a consistent height for all images */
+        }
+
+        .watch-info {
+            display: none;
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60%;
+            background-color: rgba(43, 41, 41, 0.644);
+            background-attachment: scroll;
+            color: white;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .watch-container:hover {
+            transform: scale(1.1);
+        }
+
+        .watch-container:hover .watch-info {
+            display: block;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            background-color: black;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .footer-column {
+            flex: 1;
+            margin: 10px;
+            min-width: 200px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 20px;
+            background-color: #272626ea;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+
+<body>
+    <header
+        style="background-color: black; color: white; padding: 50px; text-align: center;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:50px">
+        <a href="index.html" style="color:white;text-decoration: none;">Amazon.in</a>
+        <div style="float: right; text-align: center; position: relative;">
+            <a href="Cart.html"><img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\cart button.png" alt="cart"
+                    style="width: 70px; height: 70px;"></a>
+            <span id="cart-count"
+                style="position: absolute; top: 0; right: 0; background: red; color: white; border-radius: 50%; padding: 5px 10px; font-size: 20px;">0</span>
+            <br>
+            <a href="Cart.html" style="color:white;text-decoration: none;font-size: 25px;">Your Cart</a>
+        </div>
+    </header>
+    <hr style="border: 1px solid white;">
+    <header
+        style="background-color: black;padding:5px;color:white;text-align: center;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 50px;">
+        <h2 style="font-family: 'Times New Roman', Times, serif;margin:30px ">THE LUXURY COLLECTION</h2>
+        <h6 style="font-family: arial mt;margin:30px">
+            Footwear Collection</h6>
+        <h5 style="font-family: century cotnic;margin: 30px">Up To 50% Off</h5>
+    </header>
+    <hr style="border: 1px solid white;">
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+        <div class="watch-container">
+            <img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\footwear1.jpg" alt="Footwear 1">
+            <div class="watch-info">
+                <p class="description"><b>NIKE AIR MAX<br>RUNNING SHOES</b></p>
+                <p><b>Price: Rs. 7000</b></p>
+                <a href="Cart.html"
+                    style="color: black;background-color: rgb(248, 184, 7);padding: 10px;text-decoration: none;border-radius: 10px;"
+                    onclick="addToCart('NIKE AIR MAX RUNNING SHOES', '7000', 'C:\\Users\\pc\\Desktop\\Atharva\\html\\Amazon\\images\\footwear1.jpg')">Add
+                    to
+                    Cart</a>
+                <p style="text-align: left;">Product details<br>
+                    Material- Mesh<br>
+                    Color- Black<br>
+                    Size- 8<br>
+                    Warranty- 6 Months<br>
+                    Country of Origin- Vietnam<br>
+                </p>
+            </div>
+        </div>
+        <div class="watch-container">
+            <img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\footwear2.jpg" alt="Footwear 2">
+            <div class="watch-info">
+                <p class="description"><b>NIKE ULTRABOOST<br>FOOTBALL SHOES</b></p>
+                <p><b>Price: Rs. 10000</b></p>
+                <a href="Cart.html"
+                    style="color: black;background-color: rgb(248, 184, 7);padding: 10px;text-decoration: none;border-radius: 10px;"
+                    onclick="addToCart('NIKE ULTRABOOST FOOTBALL SHOES', '10000', 'C:\\Users\\pc\\Desktop\\Atharva\\html\\Amazon\\images\\footwear2.jpg')">Add
+                    to
+                    Cart</a>
+                <p style="text-align: left;">
+                    Material- Knit<br>
+                    Color- White<br>
+                    Size- 9<br>
+                    Warranty- 6 Months<br>
+                    Country of Origin- China<br>
+                </p>
+            </div>
+        </div>
+        <div class="watch-container">
+            <img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\footwear3.jpg" alt="Footwear 3">
+            <div class="watch-info">
+                <p class="description"><b>NIKE FLYER<br>RUNNING SHOES</b></p>
+                <p><b>Price: Rs. 50000</b></p>
+                <a href="Cart.html"
+                    style="color: black;background-color: rgb(248, 184, 7);padding: 10px;text-decoration: none;border-radius: 10px;"
+                    onclick="addToCart('NIKE FLYER RUNNING SHOES', '50000', 'C:\\Users\\pc\\Desktop\\Atharva\\html\\Amazon\\images\\footwear3.jpg')">Add
+                    to
+                    Cart</a>
+                <p style="text-align: left;">Product details<br>
+                    Material- Synthetic<br>
+                    Color- Blue<br>
+                    Size- 10<br>
+                    Warranty- 6 Months<br>
+                    Country of Origin- India<br>
+                </p>
+            </div>
+        </div>
+        <div class="watch-container">
+            <img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\footwear4.jpg" alt="Footwear 4">
+            <div class="watch-info">
+                <p class="description"><b>NIKE CLASSIC<br>SNEAKERS</b></p>
+                <p>Price: Rs. 200000</p>
+                <a href="Cart.html"
+                    style="color: black;background-color: rgb(248, 184, 7);padding: 10px;text-decoration: none;border-radius: 10px;"
+                    onclick="addToCart('NIKE CLASSIC SNEAKERS', '200000', 'C:\\Users\\pc\\Desktop\\Atharva\\html\\Amazon\\images\\footwear4.jpg')">Add
+                    to
+                    Cart</a>
+                <p style="text-align: left;">Product details<br>
+                    Material- Leather<br>
+                    Color- White<br>
+                    Size- 8<br>
+                    Warranty- 6 Months<br>
+                    Country of Origin- Vietnam<br>
+                </p>
+            </div>
+        </div>
+        <div class="watch-container">
+            <img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\footwear5.jpg" alt="Footwear 5">
+            <div class="watch-info">
+                <p class="description"><b>NIKE<br>TRAINING SHOES</b></p>
+                <p>Price: Rs. 60000</p>
+                <a href="Cart.html"
+                    style="color: black;background-color: rgb(248, 184, 7);padding: 10px;text-decoration: none;border-radius: 10px;"
+                    onclick="addToCart('NIKE TRAINING SHOES', '60000', 'C:\\Users\\pc\\Desktop\\Atharva\\html\\Amazon\\images\\footwear5.jpg')">Add
+                    to
+                    Cart</a>
+                <p style="text-align: left;">Product details<br>
+                    Material- Mesh<br>
+                    Color- Black<br>
+                    Size- 9<br>
+                    Warranty- 6 Months<br>
+                    Country of Origin- China<br>
+                </p>
+            </div>
+        </div>
+        <div class="watch-container">
+            <img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\footwear6.jpg" alt="Footwear 6">
+            <div class="watch-info">
+                <p class="description"><b>SKETCHERS<br>RUNNING SHOES</b></p>
+                <p>Price: Rs. 8000</p>
+                <a href="Cart.html"
+                    style="color: black;background-color: rgb(248, 184, 7);padding: 10px;text-decoration: none;border-radius: 10px;"
+                    onclick="addToCart('SKETCHERS RUNNING SHOES', '8000', 'C:\\Users\\pc\\Desktop\\Atharva\\html\\Amazon\\images\\footwear6.jpg')">Add
+                    to
+                    Cart</a>
+                <p style="text-align: left;">Product details<br>
+                    Material- Mesh<br>
+                    Color- Grey<br>
+                    Size- 10<br>
+                    Warranty- 6 Months<br>
+                    Country of Origin- Japan<br>
+                </p>
+            </div>
+        </div>
+        <div class="watch-container">
+            <img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\footwear7.jpg" alt="Footwear 7">
+            <div class="watch-info">
+                <p class="description"><b>ASICS<br>BADMINTON SHOES</b></p>
+                <p>Price: Rs. 5500</p>
+                <a href="Cart.html"
+                    style="color: black;background-color: rgb(248, 184, 7);padding: 10px;text-decoration: none;border-radius: 10px;"
+                    onclick="addToCart('ASICS BADMINTON SHOES', '5500', 'C:\\Users\\pc\\Desktop\\Atharva\\html\\Amazon\\images\\footwear7.jpg')">Add
+                    to
+                    Cart</a>
+                <p style="text-align: left;">Product details<br>
+                    Material- Synthetic<br>
+                    Color- Red<br>
+                    Size- 9<br>
+                    Warranty- 6 Months<br>
+                    Country of Origin- USA<br>
+                </p>
+            </div>
+        </div>
+        <div class="watch-container">
+            <img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\footwear8.jpg" alt="Footwear 8" height="350px"
+                width="300px">
+            <div class="watch-info">
+                <p class="description"><b>BATA<br>SANDAL</b></p>
+                <p>Price: Rs. 3000</p>
+                <a href="Cart.html"
+                    style="color: black;background-color: rgb(248, 184, 7);padding: 10px;text-decoration: none;border-radius: 10px;"
+                    onclick="addToCart('BATA SANDAL', '3000', 'C:\\Users\\pc\\Desktop\\Atharva\\html\\Amazon\\images\\footwear8.jpg')">Add
+                    to
+                    Cart</a>
+                <p style="text-align: left;">Product details<br>
+                    Material- Canvas<br>
+                    Color- Black<br>
+                    Size- 8<br>
+                    Warranty- 6 Months<br>
+                    Country of Origin- USA<br>
+                </p>
+            </div>
+        </div>
+        <div class="watch-container">
+            <img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\footwear9.jpg" alt="Footwear 9" height="350px"
+                width="300px">
+            <div class="watch-info">
+                <p class="description"><b>CKD<br>SANDAL</b></p>
+                <p>Price: Rs. 3500</p>
+                <a href="Cart.html"
+                    style="color: black;background-color: rgb(248, 184, 7);padding: 10px;text-decoration: none;border-radius: 10px;"
+                    onclick="addToCart('CKD SANDALS', '3500', 'C:\\Users\\pc\\Desktop\\Atharva\\html\\Amazon\\images\\footwear9.jpg')">Add
+                    to
+                    Cart</a>
+                <p style="text-align: left;">Product details<br>
+                    Material- Suede<br>
+                    Color- Black<br>
+                    Size- 9<br>
+                    Warranty- 6 Months<br>
+                    Country of Origin- USA<br>
+                </p>
+            </div>
+        </div>
+        <div class="watch-container">
+            <img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\footwear10.jpg" alt="Footwear 10">
+            <div class="watch-info">
+                <p class="description"><b>NIKE JORDAN<br>CASUAL SHOES</b></p>
+                <p>Price: Rs. 450000</p>
+                <a href="Cart.html"
+                    style="color: black;background-color: rgb(248, 184, 7);padding: 10px;text-decoration: none;border-radius: 10px;"
+                    onclick="addToCart('NIKE JORDAN CASUAL SHOES', '450000', 'C:\\Users\\pc\\Desktop\\Atharva\\html\\Amazon\\images\\footwear10.jpg')">Add
+                    to
+                    Cart</a>
+                <p style="text-align: left;">Product details<br>
+                    Material- Mesh<br>
+                    Color- Grey<br>
+                    Size- 8<br>
+                    Warranty- 6 Months<br>
+                    Country of Origin- China<br>
+                </p>
+            </div>
+        </div>
+        <div class="watch-container">
+            <img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\footwear11.jpg" alt="Footwear 11">
+            <div class="watch-info">
+                <p class="description"><b>CLARKS DESERT BOOTS<br>CASUAL SHOES</b></p>
+                <p>Price: Rs. 7000</p>
+                <a href="Cart.html"
+                    style="color: black;background-color: rgb(248, 184, 7);padding: 10px;text-decoration: none;border-radius: 10px;"
+                    onclick="addToCart('CLARKS DESERT BOOTS CASUAL SHOES', '7000', 'C:\\Users\\pc\\Desktop\\Atharva\\html\\Amazon\\images\\footwear11.jpg')">Add
+                    to
+                    Cart</a>
+                <p style="text-align: left;">Product details<br>
+                    Material- Suede<br>
+                    Color- Brown<br>
+                    Size- 9<br>
+                    Warranty- 6 Months<br>
+                    Country of Origin- UK<br>
+                </p>
+            </div>
+        </div>
+        <div class="watch-container">
+            <img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\footwear12.jpg" alt="Footwear 12">
+            <div class="watch-info">
+                <p class="description"><b>TIMBERLAND<br>WORK HEELS</b></p>
+                <p>Price: Rs. 9000</p>
+                <a href="Cart.html"
+                    style="color: black;background-color: rgb(248, 184, 7);padding: 10px;text-decoration: none;border-radius: 10px;"
+                    onclick="addToCart('TIMBERLAND WORK HEELS', '9000', 'C:\\Users\\pc\\Desktop\\Atharva\\html\\Amazon\\images\\footwear12.jpg')">Add
+                    to
+                    Cart</a>
+                <p style="text-align: left;">Product details<br>
+                    Material- Leather<br>
+                    Color- Wheat<br>
+                    Size- 10<br>
+                    Warranty- 6 Months<br>
+                    Country of Origin- USA<br>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function addToCart(name, price, image) {
+            let item = {
+                name: name,
+                price: price,
+                image: image,
+                quantity: 1
+            };
+
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            cart.push(item);
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            alert("Item added to cart!");
+            updateCartCount();
+        }
+
+        function updateCartCount() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let itemCount = cart.reduce((total, item) => total + item.quantity, 0);
+            document.getElementById("cart-count").innerText = itemCount;
+        }
+
+        // Update cart count on page load
+        updateCartCount();
+    </script>
+    <div class="footer-container">
+        <div class="footer-column">
+            <p>Books, art<br>& collectibles</p>
+        </div>
+        <div class="footer-column">
+            <p>Amazon Web Services<br>Scalable Cloud<br>Computing Services</p>
+        </div>
+        <div class="footer-column">
+            <p>Audible<br>Download<br>Audio Books</p>
+        </div>
+        <div class="footer-column">
+            <p>IMDb<br>Movies, TV<br>& Celebrities</p>
+        </div>
+        <div class="footer-column">
+            <p>Shopbop<br>Designer<br>Fashion Brands</p>
+        </div>
+        <div class="footer-column">
+            <p>Amazon Business<br>Your Business</p>
+        </div>
+        <div class="footer-column">
+            <p>Prime Now<br>2-Hour Delivery<br>on Everyday Items</p>
+        </div>
+        <div class="footer-column">
+            <p>Amazon Prime Music<br>100 million songs, ad-free<br>Over 15 million podcast episodes</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <a href="Footwear.html" style="color: whitesmoke;font-size: 20px;"><b>Back to top</b></a>
+        <p>Conditions of Use & Sale<br>Privacy Notice<br>Interest-Based Ads<br>© 1996-2025, Amazon.com, Inc. or its
+            affiliates</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,209 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        .cart-container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 10px 0;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cart-item img {
+            width: 80px;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .remove-btn {
+            background: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            background-color: black;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .footer-column {
+            flex: 1;
+            margin: 10px;
+            min-width: 200px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 20px;
+            background-color: #272626ea;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+
+<body>
+    <header
+        style="background-color: black; color: white; padding: 50px; text-align: center;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:50px">
+        <a href="index.html" style="color:white;text-decoration: none;">Amazon.in</a>
+        <div style="float: right; text-align: center; position: relative;">
+            <a href="Cart.html"><img src="C:\Users\pc\\Desktop\Atharva\html\Amazon\images\cart button.png" alt="cart"
+                    style="width: 70px; height: 70px;"></a>
+            <span id="cart-count"
+                style="position: absolute; top: 0; right: 0; background: red; color: white; border-radius: 50%; padding: 5px 10px; font-size: 20px;">0</span>
+            <br>
+            <a href="Cart.html" style="color:white;text-decoration: none;font-size: 25px;">Your cart</a>
+        </div>
+    </header>
+    <hr>
+
+    <div class="cart-container">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <h3 id="cart-total">Total: Rs. 0</h3>
+        <button onclick="clearCart()"
+            style="padding: 10px; background: red; color: white; border: none; cursor: pointer; border-radius: 5px;">
+            Clear Cart
+        </button>
+        <button onclick="buyNow()"
+            style="padding: 10px; background: green; color: white; border: none; cursor: pointer; border-radius: 5px; margin-top: 10px;">
+            Buy Now
+        </button>
+    </div>
+
+    <button onclick="continueShopping()"
+        style="padding: 15px 30px; background: #ff9900; color: white; border: none; cursor: pointer; border-radius: 50px; font-size: 20px; position: fixed; bottom: 20px; right: 20px;">
+        Continue from where you left
+    </button>
+
+    <script>
+        function loadCart() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let cartContainer = document.getElementById("cart-items");
+            let cartTotal = document.getElementById("cart-total");
+            let cartCount = document.getElementById("cart-count");
+
+            if (cart.length === 0) {
+                cartContainer.innerHTML = "<p>Your cart is empty.</p>";
+                cartTotal.innerHTML = "Total: Rs. 0";
+                cartCount.innerHTML = "0";
+                return;
+            }
+
+            cartContainer.innerHTML = "";
+            let total = 0;
+            let itemCount = 0;
+            cart.forEach((item, index) => {
+                if (!item.quantity) {
+                    item.quantity = 1;
+                }
+                let div = document.createElement("div");
+                div.classList.add("cart-item");
+                div.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}">
+                    <p><b>${item.name}</b><br>Price: Rs. ${item.price}</p>
+                    <p>Quantity: <input type="number" value="${item.quantity}" min="1" onchange="updateQuantity(${index}, this.value)"></p>
+                    <button class="remove-btn" onclick="removeFromCart(${index})">Remove</button>
+                `;
+                cartContainer.appendChild(div);
+                total += parseFloat(item.price.replace(/,/g, '')) * item.quantity;
+                itemCount += item.quantity;
+            });
+            cartTotal.innerHTML = `Total: Rs. ${total}`;
+            cartCount.innerHTML = itemCount;
+        }
+
+        function updateQuantity(index, quantity) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart[index].quantity = quantity;
+            localStorage.setItem("cart", JSON.stringify(cart));
+            loadCart();
+        }
+
+        function removeFromCart(index) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart.splice(index, 1);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            loadCart();
+        }
+
+        function clearCart() {
+            localStorage.removeItem("cart");
+            loadCart();
+        }
+
+        function buyNow() {
+            alert("You have purchased the products(Not really😃).\nThank you for your purchase!");
+            clearCart();
+        }
+
+        function continueShopping() {
+            window.history.back();
+        }
+
+
+        loadCart();
+    </script>
+
+    <div class="footer-container">
+        <div class="footer-column">
+            <p>Books, art<br>& collectibles</p>
+        </div>
+        <div class="footer-column">
+            <p>Amazon Web Services<br>Scalable Cloud<br>Computing Services</p>
+        </div>
+        <div class="footer-column">
+            <p>Audible<br>Download<br>Audio Books</p>
+        </div>
+        <div class="footer-column">
+            <p>IMDb<br>Movies, TV<br>& Celebrities</p>
+        </div>
+        <div class="footer-column">
+            <p>Shopbop<br>Designer<br>Fashion Brands</p>
+        </div>
+        <div class="footer-column">
+            <p>Amazon Business<br>Your Business</p>
+        </div>
+        <div class="footer-column">
+            <p>Prime Now<br>2-Hour Delivery<br>on Everyday Items</p>
+        </div>
+        <div class="footer-column">
+            <p>Amazon Prime Music<br>100 million songs, ad-free<br>Over 15 million podcast episodes</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <a href="Cart.html" style="color: whitesmoke;font-size: 20px;"><b>Back to top</b></a>
+        <p>Conditions of Use & Sale<br>Privacy Notice<br>Interest-Based Ads<br>© 1996-2025, Amazon.com, Inc. or its
+            affiliates</p>
+    </div>
+</body>
+
+</html>

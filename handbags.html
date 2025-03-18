@@ -1,0 +1,394 @@
+<html>
+
+<head>
+    <title>
+        Handbags
+    </title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        .description {
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+        }
+
+        .watch-container {
+            margin: 20px;
+            text-align: center;
+            border: 1px solid white;
+            padding: 10px;
+            background-color: aliceblue;
+            position: relative;
+            transition: transform 0.3s ease;
+            overflow-y: scroll;
+
+        }
+
+        .watch-container img {
+            width: 225px;
+            height: 300px;
+        }
+
+        .watch-info {
+            display: none;
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background-color: rgba(43, 41, 41, 0.644);
+            background-attachment: scroll;
+            color: white;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .watch-container:hover {
+            transform: scale(1.1);
+        }
+
+        .watch-container:hover .watch-info {
+            display: block;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            background-color: black;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .footer-column {
+            flex: 1;
+            margin: 10px;
+            min-width: 200px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 20px;
+            background-color: #272626ea;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+
+<body>
+    <header
+        style="background-color: black; color: white; padding: 50px; text-align: center;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:50px">
+        <a href="index.html" style="color:white;text-decoration: none;">Amazon.in</a>
+        <div style="float: right; text-align: center; position: relative;">
+            <a href="Cart.html"><img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\cart button.png" alt="cart"
+                    style="width: 70px; height: 70px;"></a>
+            <span id="cart-count"
+                style="position: absolute; top: 0; right: 0; background: red; color: white; border-radius: 50%; padding: 5px 10px; font-size: 20px;">0</span>
+            <br>
+            <a href="Cart.html" style="color:white;text-decoration: none;font-size: 25px;">Your Cart</a>
+        </div>
+    </header>
+    <hr style="border: 1px solid white;">
+    <header
+        style="background-color: black;padding:5px;color:white;text-align: center;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 50px;">
+        <h2 style="font-family: 'Times New Roman', Times, serif;margin:30px ">THE LUXURY COLLECTION</h2>
+        <h6 style="font-family: arial mt;margin:30px">
+            Handbags And Clutches</h6>
+        <h5 style="font-family: century cotnic;margin: 30px">Up To 50% Off</h5>
+    </header>
+    <hr style="border: 1px solid white;">
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+        <div class="watch-container">
+            <img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\handbags1.jpg" alt="Handbag 1">
+            <div class="watch-info">
+                <p class="description"><b>GUCCI BLACK LEATHER<br>HANDBAG</b></p>
+                <p><b>Price: Rs. 7000</b></p>
+                <a href="Cart.html"
+                    style="color: black;background-color: rgb(248, 184, 7);padding: 10px;text-decoration: none;border-radius: 10px;"
+                    onclick="addToCart('GUCCI BLACK LEATHER HANDBAG', '7000', 'C:\\Users\\pc\\Desktop\\Atharva\\html\\Amazon\\images\\handbags1.jpg')">Add
+                    to
+                    Cart</a>
+                <p style="text-align: left;">Product details<br>
+                    Material- Leather<br>
+                    Color- Black<br>
+                    Dimensions- 30x20x10 cm<br>
+                    Warranty- 1 Year<br>
+                    Country of Origin- Italy<br>
+                </p>
+            </div>
+        </div>
+        <div class="watch-container">
+            <img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\handbags2.jpg" alt="Handbag 2">
+            <div class="watch-info">
+                <p class="description"><b>PRADA BROWN<br>HANDBAG</b></p>
+                <p><b>Price: Rs. 10000</b></p>
+                <a href="Cart.html"
+                    style="color: black;background-color: rgb(248, 184, 7);padding: 10px;text-decoration: none;border-radius: 10px;"
+                    onclick="addToCart('PRADA BROWN HANDBAG', '10000', 'C:\\Users\\pc\\Desktop\\Atharva\\html\\Amazon\\images\\handbags2.jpg')">Add
+                    to
+                    Cart</a>
+                <p style="text-align: left;">
+                    Material- Leather<br>
+                    Color- Brown<br>
+                    Dimensions- 35x25x15 cm<br>
+                    Warranty- 1 Year<br>
+                    Country of Origin- Italy<br>
+                </p>
+            </div>
+        </div>
+        <div class="watch-container">
+            <img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\handbags3.jpg" alt="Handbag 3">
+            <div class="watch-info">
+                <p class="description"><b>LOUIS VUITTON<br>MONOGRAM HANDBAG</b></p>
+                <p><b>Price: Rs. 15000</b></p>
+                <a href="Cart.html"
+                    style="color: black;background-color: rgb(248, 184, 7);padding: 10px;text-decoration: none;border-radius: 10px;"
+                    onclick="addToCart('LOUIS VUITTON MONOGRAM HANDBAG', '15000', 'C:\\Users\\pc\\Desktop\\Atharva\\html\\Amazon\\images\\handbags3.jpg')">Add
+                    to
+                    Cart</a>
+                <p style="text-align: left;">Product details<br>
+                    Material- Canvas<br>
+                    Color- Monogram<br>
+                    Dimensions- 40x30x20 cm<br>
+                    Warranty- 1 Year<br>
+                    Country of Origin- France<br>
+                </p>
+            </div>
+        </div>
+        <div class="watch-container">
+            <img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\handbags4.jpg" alt="Handbag 4">
+            <div class="watch-info">
+                <p class="description"><b>CHANEL QUILTED<br>LEATHER HANDBAG</b></p>
+                <p>Price: Rs. 20000</p>
+                <a href="Cart.html"
+                    style="color: black;background-color: rgb(248, 184, 7);padding: 10px;text-decoration: none;border-radius: 10px;"
+                    onclick="addToCart('CHANEL QUILTED LEATHER HANDBAG', '20000', 'C:\\Users\\pc\\Desktop\\Atharva\\html\\Amazon\\images\\handbags4.jpg')">Add
+                    to
+                    Cart</a>
+                <p style="text-align: left;">Product details<br>
+                    Material- Leather<br>
+                    Color- Black<br>
+                    Dimensions- 25x15x10 cm<br>
+                    Warranty- 1 Year<br>
+                    Country of Origin- France<br>
+                </p>
+            </div>
+        </div>
+        <div class="watch-container">
+            <img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\handbags5.jpg" alt="Handbag 5">
+            <div class="watch-info">
+                <p class="description"><b>HERMES BIRKIN<br>LEATHER HANDBAG</b></p>
+                <p>Price: Rs. 50000</p>
+                <a href="Cart.html"
+                    style="color: black;background-color: rgb(248, 184, 7);padding: 10px;text-decoration: none;border-radius: 10px;"
+                    onclick="addToCart('HERMES BIRKIN LEATHER HANDBAG', '50000', 'C:\\Users\\pc\\Desktop\\Atharva\\html\\Amazon\\images\\handbags5.jpg')">Add
+                    to
+                    Cart</a>
+                <p style="text-align: left;">Product details<br>
+                    Material- Leather<br>
+                    Color- Orange<br>
+                    Dimensions- 35x25x18 cm<br>
+                    Warranty- 1 Year<br>
+                    Country of Origin- France<br>
+                </p>
+            </div>
+        </div>
+        <div class="watch-container">
+            <img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\handbags6.jpg" alt="Handbag 6">
+            <div class="watch-info">
+                <p class="description"><b>DIOR SADDLE<br>HANDBAG</b></p>
+                <p>Price: Rs. 18000</p>
+                <a href="Cart.html"
+                    style="color: black;background-color: rgb(248, 184, 7);padding: 10px;text-decoration: none;border-radius: 10px;"
+                    onclick="addToCart('DIOR SADDLE HANDBAG', '1800', 'C:\\Users\\pc\\Desktop\\Atharva\\html\\Amazon\\images\\handbags6.jpg')">Add
+                    to
+                    Cart</a>
+                <p style="text-align: left;">Product details<br>
+                    Material- Leather<br>
+                    Color- Blue<br>
+                    Dimensions- 30x20x10 cm<br>
+                    Warranty- 1 Year<br>
+                    Country of Origin- Italy<br>
+                </p>
+            </div>
+        </div>
+        <div class="watch-container">
+            <img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\handbags7.jpg" alt="Handbag 7">
+            <div class="watch-info">
+                <p class="description"><b>FENDI PEEKABOO<br>HANDBAG</b></p>
+                <p>Price: Rs. 22000</p>
+                <a href="Cart.html"
+                    style="color: black;background-color: rgb(248, 184, 7);padding: 10px;text-decoration: none;border-radius: 10px;"
+                    onclick="addToCart('FENDI PEEKABOO HANDBAG', '2200', 'C:\\Users\\pc\\Desktop\\Atharva\\html\\Amazon\\images\\handbags7.jpg')">Add
+                    to
+                    Cart</a>
+                <p style="text-align: left;">Product details<br>
+                    Material- Leather<br>
+                    Color- Red<br>
+                    Dimensions- 32x25x15 cm<br>
+                    Warranty- 1 Year<br>
+                    Country of Origin- Italy<br>
+                </p>
+            </div>
+        </div>
+        <div class="watch-container">
+            <img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\handbags8.jpg" alt="Handbag 8">
+            <div class="watch-info">
+                <p class="description"><b>YSL MONOGRAM<br>HANDBAG</b></p>
+                <p>Price: Rs. 1500</p>
+                <a href="Cart.html"
+                    style="color: black;background-color: rgb(248, 184, 7);padding: 10px;text-decoration: none;border-radius: 10px;"
+                    onclick="addToCart('YSL MONOGRAM HANDBAG', '1500', 'C:\\Users\\pc\\Desktop\\Atharva\\html\\Amazon\\images\\handbags8.jpg')">Add
+                    to
+                    Cart</a>
+                <p style="text-align: left;">Product details<br>
+                    Material- Leather<br>
+                    Color- Black<br>
+                    Dimensions- 28x18x8 cm<br>
+                    Warranty- 1 Year<br>
+                    Country of Origin- France<br>
+                </p>
+            </div>
+        </div>
+        <div class="watch-container">
+            <img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\handbags9.jpg" alt="Handbag 9">
+            <div class="watch-info">
+                <p class="description"><b>BURBERRY CHECK<br>HANDBAG</b></p>
+                <p>Price: Rs. 12000</p>
+                <a href="Cart.html"
+                    style="color: black;background-color: rgb(248, 184, 7);padding: 10px;text-decoration: none;border-radius: 10px;"
+                    onclick="addToCart('BURBERRY CHECK HANDBAG', '12000', 'C:\\Users\\pc\\Desktop\\Atharva\\html\\Amazon\\images\\handbags9.jpg')">Add
+                    to
+                    Cart</a>
+                <p style="text-align: left;">Product details<br>
+                    Material- Canvas<br>
+                    Color- Check<br>
+                    Dimensions- 30x20x10 cm<br>
+                    Warranty- 1 Year<br>
+                    Country of Origin- UK<br>
+                </p>
+            </div>
+        </div>
+        <div class="watch-container">
+            <img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\handbags10.jpg" alt="Handbag 10">
+            <div class="watch-info">
+                <p class="description"><b>COACH SIGNATURE<br>HANDBAG</b></p>
+                <p>Price: Rs. 8000</p>
+                <a href="Cart.html"
+                    style="color: black;background-color: rgb(248, 184, 7);padding: 10px;text-decoration: none;border-radius: 10px;"
+                    onclick="addToCart('COACH SIGNATURE HANDBAG', '8000', 'C:\\Users\\pc\\Desktop\\Atharva\\html\\Amazon\\images\\handbags10.jpg')">Add
+                    to
+                    Cart</a>
+                <p style="text-align: left;">Product details<br>
+                    Material- Canvas<br>
+                    Color- Signature<br>
+                    Dimensions- 35x25x15 cm<br>
+                    Warranty- 1 Year<br>
+                    Country of Origin- USA<br>
+                </p>
+            </div>
+        </div>
+        <div class="watch-container">
+            <img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\handbags11.jpg" alt="Handbag 11">
+            <div class="watch-info">
+                <p class="description"><b>MICHAEL KORS<br>JET SET HANDBAG</b></p>
+                <p>Price: Rs. 9000</p>
+                <a href="Cart.html"
+                    style="color: black;background-color: rgb(248, 184, 7);padding: 10px;text-decoration: none;border-radius: 10px;"
+                    onclick="addToCart('MICHAEL KORS JET SET HANDBAG', '9000', 'C:\\Users\\pc\\Desktop\\Atharva\\html\\Amazon\\images\\handbags11.jpg')">Add
+                    to
+                    Cart</a>
+                <p style="text-align: left;">Product details<br>
+                    Material- Leather<br>
+                    Color- Brown<br>
+                    Dimensions- 30x20x10 cm<br>
+                    Warranty- 1 Year<br>
+                    Country of Origin- USA<br>
+                </p>
+            </div>
+        </div>
+        <div class="watch-container">
+            <img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\handbags12.jpg" alt="Handbag 12">
+            <div class="watch-info">
+                <p class="description"><b>CELINE LUGGAGE<br>HANDBAG</b></p>
+                <p>Price: Rs. 2500</p>
+                <a href="Cart.html"
+                    style="color: black;background-color: rgb(248, 184, 7);padding: 10px;text-decoration: none;border-radius: 10px;"
+                    onclick="addToCart('CELINE LUGGAGE HANDBAG', '2500', 'C:\\Users\\pc\\Desktop\\Atharva\\html\\Amazon\\images\\handbags12.jpg')">Add
+                    to
+                    Cart</a>
+                <p style="text-align: left;">Product details<br>
+                    Material- Leather<br>
+                    Color- Black<br>
+                    Dimensions- 40x30x20 cm<br>
+                    Warranty- 1 Year<br>
+                    Country of Origin- France<br>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function addToCart(name, price, image) {
+            let item = {
+                name: name,
+                price: price,
+                image: image,
+                quantity: 1
+            };
+
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            cart.push(item);
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            alert("Item added to cart!");
+            updateCartCount();
+        }
+
+        function updateCartCount() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let itemCount = cart.reduce((total, item) => total + item.quantity, 0);
+            document.getElementById("cart-count").innerText = itemCount;
+        }
+
+        // Update cart count on page load
+        updateCartCount();
+    </script>
+    <div class="footer-container">
+        <div class="footer-column">
+            <p>Books, art<br>& collectibles</p>
+        </div>
+        <div class="footer-column">
+            <p>Amazon Web Services<br>Scalable Cloud<br>Computing Services</p>
+        </div>
+        <div class="footer-column">
+            <p>Audible<br>Download<br>Audio Books</p>
+        </div>
+        <div class="footer-column">
+            <p>IMDb<br>Movies, TV<br>& Celebrities</p>
+        </div>
+        <div class="footer-column">
+            <p>Shopbop<br>Designer<br>Fashion Brands</p>
+        </div>
+        <div class="footer-column">
+            <p>Amazon Business<br>Your Business</p>
+        </div>
+        <div class="footer-column">
+            <p>Prime Now<br>2-Hour Delivery<br>on Everyday Items</p>
+        </div>
+        <div class="footer-column">
+            <p>Amazon Prime Music<br>100 million songs, ad-free<br>Over 15 million podcast episodes</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <a href="handbags.html" style="color: whitesmoke;font-size: 20px;"><b>Back to top</b></a>
+        <p>Conditions of Use & Sale<br>Privacy Notice<br>Interest-Based Ads<br>© 1996-2025, Amazon.com, Inc. or its
+            affiliates</p>
+    </div>
+</body>
+
+</html>

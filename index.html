@@ -1,0 +1,273 @@
+<html>
+
+<head>
+    <title>Amazon</title>
+    <style>
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        .slides {
+            display: none;
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            background-color: black;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .footer-column {
+            flex: 1;
+            margin: 10px;
+            min-width: 200px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 20px;
+            background-color: #272626ea;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+
+<body>
+    <header
+        style="background-color: black; color: white; padding: 50px; text-align: center;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:50px">
+        <a href="index.html" style="color:white;text-decoration: none;">Amazon.in</a>
+        <div style="float: right; text-align: center; position: relative;">
+            <a href="Cart.html"><img src="C:\Users\pc\\Desktop\Atharva\html\Amazon\images\cart button.png" alt="cart"
+                    style="width: 70px; height: 70px;"></a>
+            <span id="cart-count"
+                style="position: absolute; top: 0; right: 0; background: red; color: white; border-radius: 50%; padding: 5px 10px; font-size: 20px;">0</span>
+            <br>
+            <a href="Cart.html" style="color:white;text-decoration: none;font-size: 25px;">Your Cart</a>
+        </div>
+    </header>
+    <div style="display: flex; align-items: center; overflow-x: auto; white-space: nowrap;">
+        <div style="margin: 20px; text-align: center; display: inline-block;">
+            <a href="Watches.html"><img src="C:\Users\pc\\Desktop\Atharva\html\Amazon\images\watches image.png"
+                    alt="Watches" height="200px" width="200"></a>
+            <p style="text-align: center;font-size: 15px;"><b><a href="watches.html" style="color:black">Check out our
+                        latest
+                        collection
+                        of
+                        watches!!</a></b></p>
+        </div>
+        <div style="margin: 20px; text-align: center; display: inline-block;">
+            <a href="handbags.html"><img src="C:\Users\pc\\Desktop\Atharva\html\Amazon\images\handbags image.png"
+                    alt="Handbags" height="200px" width="200"></a>
+            <p style="text-align: center;font-size: 15px;"><b><a href="handbags.html" style="color:black">Check out our
+                        latest
+                        collection
+                        of
+                        Handbags!!</a></b></p>
+        </div>
+        <div style="margin: 20px; text-align: center; display: inline-block;">
+            <a href="Footwear.html"><img src="C:\Users\pc\\Desktop\Atharva\html\Amazon\images\footwear images.png"
+                    alt="Footwears" height="200px" width="200"></a>
+            <p style="text-align: center;font-size: 15px;"><b><a href="Footwear.html" style="color:black">Check out our
+                        latest
+                        collection
+                        of
+                        Footwears!!</a></b></p>
+        </div>
+        <div style="margin: 20px; text-align: center; display: inline-block;">
+            <a href="Sunglasses and Frames.html"><img
+                    src="C:\Users\pc\\Desktop\Atharva\html\Amazon\images\eyewear images.png" alt="Sunglasses and Frames"
+                    height="200px" width="200"></a>
+            <p style="text-align: center;font-size: 15px;"><b><a href="Sunglasses and Frames.html"
+                        style="color:black">Check out our
+                        latest
+                        collection
+                        of
+                        Sunglasses and Frames!!</a></b></p>
+        </div>
+        <div style="margin: 20px; text-align: center; display: inline-block;">
+            <a href="Jewellery.html"><img src="C:\Users\pc\\Desktop\Atharva\html\Amazon\images\jewellery images.png"
+                    alt="Jewellery" height="200px" width="200"></a>
+            <p style="text-align: center;font-size: 15px;"><b><a href="Jewellery.html" style="color:black">Check out our
+                        latest
+                        collection
+                        of
+                        Jwellery!!</a></b></p>
+        </div>
+    </div>
+
+    <div class="slideshow-container">
+        <div class="slides fade"><a href="Watches.html">
+                <img src="C:\Users\pc\\Desktop\Atharva\html\Amazon\images\Watches slide show.jpg" style="width:100%">
+            </a>
+        </div>
+        <div class="slides fade"><a href="handbags.html">
+                <img src="C:\Users\pc\\Desktop\Atharva\html\Amazon\images\Luggage slide show.jpg"
+                    style="width:100%"></a>
+        </div>
+        <div class="slides fade"><a href="Footwear.html">
+                <img src="C:\Users\pc\\Desktop\Atharva\html\Amazon\images\Shoes slide show.jpg" style="width:100%"></a>
+        </div>
+        <div class="slides fade"><a href="Sunglasses and Frames.html">
+                <img src="C:\Users\pc\\Desktop\Atharva\html\Amazon\images\Jewellery slide show.jpg"
+                    style="width:100%"></a>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("slides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 4000); // 
+        }
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function updateCartCount() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let itemCount = cart.reduce((total, item) => total + item.quantity, 0);
+            document.getElementById("cart-count").innerText = itemCount;
+        }
+
+        // Update cart count on page load
+        updateCartCount();
+    </script>
+
+    <div class="footer-container">
+        <div class="footer-column">
+            <p>Books, art<br>& collectibles</p>
+        </div>
+        <div class="footer-column">
+            <p>Amazon Web Services<br>Scalable Cloud<br>Computing Services</p>
+        </div>
+        <div class="footer-column">
+            <p>Audible<br>Download<br>Audio Books</p>
+        </div>
+        <div class="footer-column">
+            <p>IMDb<br>Movies, TV<br>& Celebrities</p>
+        </div>
+        <div class="footer-column">
+            <p>Shopbop<br>Designer<br>Fashion Brands</p>
+        </div>
+        <div class="footer-column">
+            <p>Amazon Business<br>Your Business</p>
+        </div>
+        <div class="footer-column">
+            <p>Prime Now<br>2-Hour Delivery<br>on Everyday Items</p>
+        </div>
+        <div class="footer-column">
+            <p>Amazon Prime Music<br>100 million songs, ad-free<br>Over 15 million podcast episodes</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <a href="index.html" style="color: whitesmoke;font-size: 20px;"><b>Back to top</b></a>
+        <p>Conditions of Use & Sale<br>Privacy Notice<br>Interest-Based Ads<br>© 1996-2025, Amazon.com, Inc. or its
+            affiliates</p>
+    </div>
+</body>
+
+</html>

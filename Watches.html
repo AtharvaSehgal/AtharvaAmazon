@@ -1,0 +1,404 @@
+<html>
+
+<head>
+    <title>
+        Watches
+    </title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .description {
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+        }
+
+        .watch-container {
+            margin: 20px;
+            text-align: center;
+            border: 1px solid white;
+            padding: 10px;
+            background-color: aliceblue;
+            position: relative;
+            transition: transform 0.3s ease;
+            overflow-y: scroll;
+
+        }
+
+        .watch-container img {
+            width: 200px;
+            height: 300px;
+        }
+
+        .watch-info {
+            display: none;
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background-color: rgba(43, 41, 41, 0.644);
+            background-attachment: scroll;
+            color: white;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .watch-container:hover {
+            transform: scale(1.1);
+        }
+
+        .watch-container:hover .watch-info {
+            display: block;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            background-color: black;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .footer-column {
+            flex: 1;
+            margin: 10px;
+            min-width: 200px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 20px;
+            background-color: #272626ea;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+
+<body>
+    <header
+        style="background-color: black; color: white; padding: 50px; text-align: center;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:50px">
+        <a href="index.html" style="color:white;text-decoration: none;">Amazon.in</a>
+        <div style="float: right; text-align: center; position: relative;">
+            <a href="Cart.html"><img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\cart button.png" alt="cart"
+                    style="width: 70px; height: 70px;"></a>
+            <span id="cart-count"
+                style="position: absolute; top: 0; right: 0; background: red; color: white; border-radius: 50%; padding: 5px 10px; font-size: 20px;">0</span>
+            <br>
+            <a href="Cart.html" style="color:white;text-decoration: none;font-size: 25px;">Your Cart</a>
+        </div>
+    </header>
+    <hr style="border: 1px solid white;">
+    <header
+        style="background-color: black;padding:5px;color:white;text-align: center;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 50px;">
+        <h2 style="font-family: 'Times New Roman', Times, serif;margin:30px ">THE PREMIUM EDIT</h2>
+        <h6 style="font-family: arial mt;margin:30px">
+            Watches and Smartwatches</h6>
+        <h5 style="font-family: century cotnic;margin: 30px">Up To 40% Off</h5>
+    </header>
+    <hr style="border: 1px solid white;">
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+        <div class="watch-container">
+            <img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\Watch1.jpg" alt="Watch 1">
+            <div class="watch-info">
+                <p class="description"><b>FOSSIL-BLACK-GOLDEN<br>QUARTZ WATCH</b></p>
+                <p><b>Price: Rs. 70000</b></p>
+                <a href="Cart.html"
+                    style="color: black;background-color: rgb(248, 184, 7);padding: 10px;text-decoration: none;border-radius: 10px;"
+                    onclick="addToCart('FOSSIL-BLACK-GOLDEN QUARTZ WATCH', '70000', 'C:\\Users\\pc\\Desktop\\Atharva\\html\\Amazon\\images\\Watch1.jpg')">Add
+                    to
+                    Cart</a>
+                <p style="text-align: left;">Product details<br>
+                    Case diameter- 43 Millimetres<br>
+                    Band colour- Blue<br>
+                    Band material type- Leather<br>
+                    Warranty type- Manufacturer<br>
+                    Watch movement type- Quartz<br>
+                    Item weight- 0.55 Pounds<br>
+                    Country of Origin- China<br>
+                </p>
+            </div>
+        </div>
+        <div class="watch-container">
+            <img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\Watch2.jpg" alt="Watch 2">
+            <div class="watch-info">
+                <p class="description"><b>FOSSIL-BLACK<br> SMARTWATCH</b></p>
+                <p><b>Price: Rs. 10000 </b></p>
+                <a href="Cart.html"
+                    style="color: black;background-color: rgb(248, 184, 7);padding: 10px;text-decoration: none;border-radius: 10px;"
+                    onclick="addToCart('FOSSIL-BLACK SMARTWATCH', '10000', 'C:\\Users\\pc\\Desktop\\Atharva\\html\\Amazon\\images\\Watch2.jpg')">Add
+                    to
+                    Cart</a>
+                <p style="text-align: left;">
+                    Operating System- Android,Ios<br>
+                    Memory Storage Capacity- 8 GB<br>
+                    Special Feature- GPS, Heart Rate Monitor<br>
+                    Connectivity Technology- Bluetooth<br>
+                    Wireless Communication Standard- Bluetooth<br>
+                </p>
+            </div>
+        </div>
+        <div class="watch-container">
+            <img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\Watch3.jpg" alt="Watch 3">
+            <div class="watch-info">
+                <p class="description"><b>G-SHOCK BLACK-GOLDEN<BR>ANALOG WATCH</b></p>
+                <p><b>Price: Rs. 50000</b></p>
+                <a href="Cart.html"
+                    style="color: black;background-color: rgb(248, 184, 7);padding: 10px;text-decoration: none;border-radius: 10px;"
+                    onclick="addToCart('G-SHOCK BLACK-GOLDEN ANALOG WATCH', '50000', 'C:\\Users\\pc\\Desktop\\Atharva\\html\\Amazon\\images\\Watch3.jpg')">Add
+                    to
+                    Cart</a>
+                <p style="text-align: left;">Product details-<br>
+                    Case diameter- 45.4 Millimetres<br>
+                    Band colour- Black<br>
+                    Band material type- Resin<br>
+                    Warranty type- Limited<br>
+                    Watch movement type- Quartz<br>
+                    Item weight- 51 Grams<br>
+                    Country of Origin- China<br></p>
+            </div>
+        </div>
+        <div class="watch-container">
+            <img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\Watch4.jpg" alt="Watch 4">
+            <div class="watch-info">
+                <p class="description"><b>ROLEX GOLDEN<BR>ANALOG WATCH</b></p>
+                <p>Price: Rs. 260000</p>
+                <a href="Cart.html"
+                    style="color: black;background-color: rgb(248, 184, 7);padding: 10px;text-decoration: none;border-radius: 10px;"
+                    onclick="addToCart('ROLEX GOLDEN ANALOG WATCH', '260000', 'C:\\Users\\pc\\Desktop\\Atharva\\html\\Amazon\\images\\Watch4.jpg')">Add
+                    to
+                    Cart</a>
+                <p style="text-align: left;">Product details<br>
+                    Case diameter- 43 Millimetres<br>
+                    Band material type- Metal<br>
+                    Warranty type- Manufacturer<br>
+                    Watch movement type- Automatic<br>
+                    Item weight- 0.55 Pounds<br>
+                    Country of Origin- China<br>
+                </p>
+            </div>
+        </div>
+        <div class="watch-container">
+            <img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\Watch5.jpg" alt="Watch 5">
+            <div class="watch-info">
+                <p class="description"><b>SAPHERO GOLDEN-GREEN<BR>ANALOG WATCH</b></p>
+                <p>Price: Rs. 140000</p>
+                <a href="Cart.html"
+                    style="color: black;background-color: rgb(248, 184, 7);padding: 10px;text-decoration: none;border-radius: 10px;"
+                    onclick="addToCart('SAPHERO GOLDEN-GREEN ANALOG WATCH', '140000', 'C:\\Users\\pc\\Desktop\\Atharva\\html\\Amazon\\images\\Watch5.jpg')">Add
+                    to
+                    Cart</a>
+                <p style="text-align: left;">Product details<br>
+                    Case diameter- 43 Millimetres<br>
+                    Band material type- Metal<br>
+                    Warranty type- Manufacturer<br>
+                    Watch movement type- Quartz<br>
+                    Item weight- 0.55 Pounds<br>
+                    Country of Origin- China<br>
+                </p>
+            </div>
+        </div>
+        <div class="watch-container">
+            <img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\Watch6.jpg" alt="Watch 6">
+            <div class="watch-info">
+                <p class="description"><b>ROLEX GOLDEN- DIAMOND WATCH<BR>ANALOG WATCH</b></p>
+                <p>Price: Rs. 1000000</p>
+                <a href="Cart.html"
+                    style="color: black;background-color: rgb(248, 184, 7);padding: 10px;text-decoration: none;border-radius: 10px;"
+                    onclick="addToCart('ROLEX GOLDEN- DIAMOND WATCH ANALOG WATCH', '1000000', 'C:\\Users\\pc\\Desktop\\Atharva\\html\\Amazon\\images\\Watch6.jpg')">Add
+                    to
+                    Cart</a>
+                <p style="text-align: left;">Product details<br>
+                    Case diameter- 43 Millimetres<br>
+                    Band material type- metal<br>
+                    Warranty type- Manufacturer<br>
+                    Watch movement type- Quartz<br>
+                    Item weight- 0.55 Pounds<br>
+                    Country of Origin- China<br>
+                </p>
+            </div>
+        </div>
+        <div class="watch-container">
+            <img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\Watch7.jpg" alt="Watch 7">
+            <div class="watch-info">
+                <p class="description"><b>FASTRACK BLACK<BR>SMARTWATCH</b></p>
+                <p>Price: Rs. 15000</p>
+                <a href="Cart.html"
+                    style="color: black;background-color: rgb(248, 184, 7);padding: 10px;text-decoration: none;border-radius: 10px;"
+                    onclick="addToCart('FASTRACK BLACK SMARTWATCH', '15000', 'C:\\Users\\pc\\Desktop\\Atharva\\html\\Amazon\\images\\Watch7.jpg')">Add
+                    to
+                    Cart</a>
+                <p style="text-align: left;">
+                    Operating System- Android,Ios<br>
+                    Memory Storage Capacity- 8 GB<br>
+                    Special Feature- GPS, Heart Rate Monitor<br>
+                    Connectivity Technology- Bluetooth<br>
+                    Wireless Communication Standard- Bluetooth<br>
+                </p>
+            </div>
+        </div>
+        <div class="watch-container">
+            <img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\Watch8.jpg" alt="Watch 8">
+            <div class="watch-info">
+                <p class="description"><b>BOULT BLACK <BR>METAL SMARTWATCH</b></p>
+                <p>Price: Rs. 12000</p>
+                <a href="Cart.html"
+                    style="color: black;background-color: rgb(248, 184, 7);padding: 10px;text-decoration: none;border-radius: 10px;"
+                    onclick="addToCart('BOULT BLACK METAL SMARTWATCH', '12000', 'C:\\Users\\pc\\Desktop\\Atharva\\html\\Amazon\\images\\Watch8.jpg')">Add
+                    to
+                    Cart</a>
+                <p style="text-align: left;">
+                    Operating System- Android,Ios<br>
+                    Memory Storage Capacity- 8 GB<br>
+                    Special Feature- GPS, Heart Rate Monitor<br>
+                    Connectivity Technology- Bluetooth<br>
+                    Wireless Communication Standard- Bluetooth<br>
+                </p>
+            </div>
+        </div>
+        <div class="watch-container">
+            <img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\Watch9.jpg" alt="Watch 9">
+            <div class="watch-info">
+                <p class="description"><b>TITAN ROSEGOLD<BR>SMARTWATCH</b></p>
+                <p>Price: Rs. 22000</p>
+                <a href="Cart.html"
+                    style="color: black;background-color: rgb(248, 184, 7);padding: 10px;text-decoration: none;border-radius: 10px;"
+                    onclick="addToCart('TITAN ROSEGOLD SMARTWATCH', '22000', 'C:\\Users\\pc\\Desktop\\Atharva\\html\\Amazon\\images\\Watch9.jpg')">Add
+                    to
+                    Cart</a>
+                <p style="text-align: left;">
+                    Operating System- Android,Ios<br>
+                    Memory Storage Capacity- 8 GB<br>
+                    Special Feature- GPS, Heart Rate Monitor<br>
+                    Connectivity Technology- Bluetooth<br>
+                    Wireless Communication Standard- Bluetooth<br>
+                </p>
+            </div>
+        </div>
+        <div class="watch-container">
+            <img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\Watch10.jpg" alt="Watch 10">
+            <div class="watch-info">
+                <p class="description"><b>TITAN GOLDEN<BR>AUTOMATIC WATCH</b></p>
+                <p>Price: Rs. 64,000</p>
+                <a href="Cart.html"
+                    style="color: black;background-color: rgb(248, 184, 7);padding: 10px;text-decoration: none;border-radius: 10px;"
+                    onclick="addToCart('TITAN GOLDEN AUTOMATIC WATCH', ' 64,000', 'C:\\Users\\pc\\Desktop\\Atharva\\html\\Amazon\\images\\Watch10.jpg')">Add
+                    to
+                    Cart</a>
+                <p style="text-align: left;">Product details<br>
+                    Case diameter- 43 Millimetres<br>
+                    Band colour- Blue<br>
+                    Band material type- Leather<br>
+                    Warranty type- Manufacturer<br>
+                    Watch movement type- Automatic<br>
+                    Item weight- 0.55 Pounds<br>
+                    Country of Origin- China<br>
+                </p>
+            </div>
+        </div>
+        <div class="watch-container">
+            <img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\Watch11.jpg" alt="Watch 11">
+            <div class="watch-info">
+                <p class="description"><b>VICTORINOX BLUE<BR> ANALOG WATCH</b></p>
+                <p>Price: Rs. 1,55,000</p>
+                <a href="Cart.html"
+                    style="color: black;background-color: rgb(248, 184, 7);padding: 10px;text-decoration: none;border-radius: 10px;"
+                    onclick="addToCart('VICTORINOX BLUE ANALOG WATCH', ' 1,55,000', 'C:\\Users\\pc\\Desktop\\Atharva\\html\\Amazon\\images\\Watch11.jpg')">Add
+                    to
+                    Cart</a>
+                <p style="text-align: left;">Product details<br>
+                    Case diameter- 43 Millimetres<br>
+                    Band colour- Blue<br>
+                    Band material type- Metal<br>
+                    Warranty type- Manufacturer<br>
+                    Watch movement type- Quartz<br>
+                    Item weight- 0.55 Pounds<br>
+                    Country of Origin- China<br>
+                </p>
+            </div>
+        </div>
+        <div class="watch-container">
+            <img src="C:\Users\pc\Desktop\Atharva\html\Amazon\images\Watch12.jpg" alt="Watch 12">
+            <div class="watch-info">
+                <p class="description"><b>VICTORINOX BLACK-GOLDEN<BR> ANALOG WATCH</b></p>
+                <p>Price: Rs. 84,000</p>
+                <a href="Cart.html"
+                    style="color: black;background-color: rgb(248, 184, 7);padding: 10px;text-decoration: none;border-radius: 10px;"
+                    onclick="addToCart('VICTORINOX BLACK-GOLDEN ANALOG WATCH', ' 84,000', 'C:\\Users\\pc\\Desktop\\Atharva\\html\\Amazon\\images\\Watch12.jpg')">Add
+                    to
+                    Cart</a>
+                <p style="text-align: left;">Product details<br>
+                    Case diameter- 43 Millimetres<br>
+                    Band material type- Metal<br>
+                    Warranty type- Manufacturer<br>
+                    Watch movement type- Quartz<br>
+                    Item weight- 0.55 Pounds<br>
+                    Country of Origin- China<br>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function addToCart(name, price, image) {
+            let item = {
+                name: name,
+                price: price,
+                image: image,
+                quantity: 1
+            };
+
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            cart.push(item);
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            alert("Item added to cart!");
+            updateCartCount();
+        }
+
+        function updateCartCount() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let itemCount = cart.reduce((total, item) => total + item.quantity, 0);
+            document.getElementById("cart-count").innerText = itemCount;
+        }
+
+        // Update cart count on page load
+        updateCartCount();
+    </script>
+    <div class="footer-container">
+        <div class="footer-column">
+            <p>Books, art<br>& collectibles</p>
+        </div>
+        <div class="footer-column">
+            <p>Amazon Web Services<br>Scalable Cloud<br>Computing Services</p>
+        </div>
+        <div class="footer-column">
+            <p>Audible<br>Download<br>Audio Books</p>
+        </div>
+        <div class="footer-column">
+            <p>IMDb<br>Movies, TV<br>& Celebrities</p>
+        </div>
+        <div class="footer-column">
+            <p>Shopbop<br>Designer<br>Fashion Brands</p>
+        </div>
+        <div class="footer-column">
+            <p>Amazon Business<br>Your Business</p>
+        </div>
+        <div class="footer-column">
+            <p>Prime Now<br>2-Hour Delivery<br>on Everyday Items</p>
+        </div>
+        <div class="footer-column">
+            <p>Amazon Prime Music<br>100 million songs, ad-free<br>Over 15 million podcast episodes</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <a href="Watches.html" style="color: whitesmoke;font-size: 20px;"><b>Back to top</b></a>
+        <p>Conditions of Use & Sale<br>Privacy Notice<br>Interest-Based Ads<br>© 1996-2025, Amazon.com, Inc. or its
+            affiliates</p>
+    </div>
+</body>
+
+</html>
